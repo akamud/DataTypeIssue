@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:DataTypeIssue;assembly=DataTypeIssue"
+             x:DataType="viewModels:MainPageViewModel"
+             x:Class="DataTypeIssue.MainPage">
+    <ListView x:Name="listView"
+              ItemsSource="{Binding Images}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Image Source="{Binding NonExistant}" />
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
